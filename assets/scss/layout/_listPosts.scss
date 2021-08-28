@@ -1,0 +1,31 @@
+.listPost {
+	&__container {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+		gap: 3rem;
+		@extend %space;
+	}
+	&__article {
+		height: 600px;
+		@include flexCenter(space-evenly);
+		flex-direction: column;
+		&__img {
+			position: relative;
+			height: 250px;
+			width: 100%;
+		}
+		&__tag {
+			position: absolute;
+			left: 0;
+			bottom: 30px;
+			@extend %tag;
+		}
+		&__author {
+			width: 100%;
+			@include flexCenter(space-between);
+		}
+		&__btn {
+			@extend %btn;
+		}
+	}
+}

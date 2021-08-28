@@ -1,0 +1,51 @@
+/*------------------------------------*\
+    $BOTONES
+\*------------------------------------*/
+
+// btn es la clase principal para definir un botón
+
+%btn {
+	width: 140px;
+	height: 30px;
+	background-color: $buttonbackground;
+	display: inline-block;
+	color: $buttoncolor;
+	text-align: center;
+	vertical-align: middle;
+	font-size: fs(small);
+	white-space: nowrap;
+	border-radius: $radius;
+	@include transition(all $hovertransition ease-in);
+	&:hover {
+		text-decoration: none;
+		color: $buttoncolor;
+	}
+	&:active,
+	&:focus {
+		outline: none;
+	}
+	&:visited {
+		color: $buttoncolor;
+	}
+}
+
+// TAG STYLES
+%tag {
+	width: 70px;
+	border: 4px;
+	font-weight: 500;
+	border-radius: 4px;
+	text-align: center;
+	& a {
+		font-weight: $subtitlefontweight;
+	}
+}
+
+// COLOR TAG
+
+.tag--red {
+	background-color: $tag-primary;
+}
+.tag--green {
+	background-color: $tag-secondary;
+}

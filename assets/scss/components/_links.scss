@@ -1,0 +1,17 @@
+/*------------------------------------*\
+    $LINKS
+\*------------------------------------*/
+a {
+	text-decoration: none;
+	color: $linkcolor;
+	&:hover {
+		color: $linkcolorhover;
+	}
+	&:focus {
+		color: $linkcolorfocus;
+	}
+	&:hover,
+	&:active {
+		outline: 0;
+	}
+}

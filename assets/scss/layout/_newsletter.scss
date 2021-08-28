@@ -1,0 +1,50 @@
+.newsletter {
+	height: 200px;
+	background-color: $color-primary;
+	color: $light;
+	@include flexCenter();
+	&__container {
+		height: 100%;
+		margin-top: 0;
+		@include flexCenter(space-evenly);
+		flex-direction: column;
+	}
+	&__title {
+		@include flexCenter(space-evenly);
+		flex-direction: column;
+		& h2 {
+			margin-bottom: 2rem;
+			@extend %lineBottom;
+			&::after {
+				background-color: $light;
+			}
+		}
+		& p {
+			text-align: center;
+		}
+	}
+	&__subscribe {
+		width: 100%;
+		@extend %space;
+		@include flexCenter(space-evenly);
+		& input {
+			outline: none;
+			border: 0;
+			background-color: rgba(0, 0, 0, 0.2);
+			border-radius: 5px;
+			height: 30px;
+			width: 200px;
+			padding: 8px;
+			color: $light;
+			font-size: fs(small);
+		}
+		& button {
+			background-color: $light;
+			color: $color-primary;
+			@extend %btn;
+			&:hover {
+				color: $color-primary;
+			}
+		}
+	}
+}

@@ -1,0 +1,137 @@
+/*------------------------------------*\
+    $MEDIA QUERIES
+\*------------------------------------*/
+
+// HEADER
+.headerBlog {
+	@include tablet {
+		&__menu {
+			transition: none;
+			background-color: transparent;
+			position: initial;
+			height: 100%;
+			width: 70%;
+			@include flexCenter(space-evenly);
+			&__list {
+				width: 70%;
+				height: initial;
+				flex-direction: row;
+				&__items a {
+					color: $dark;
+				}
+			}
+		}
+		&__dropdown {
+			display: none;
+		}
+		&__search .fas {
+			color: $dark;
+		}
+	}
+	@include desktop {
+		&__menu {
+			width: 50%;
+		}
+	}
+}
+
+// HERO BLOG
+
+.heroBlog__container {
+	@include tablet {
+		&__title {
+			max-width: 50%;
+			padding: 0;
+		}
+		&__content {
+			padding: 0;
+			width: 80%;
+			justify-content: space-between;
+		}
+		&__author {
+			width: 60%;
+		}
+	}
+}
+
+// POPULAR POST
+
+.popularPost {
+	@include tablet {
+		&__article h3 {
+			width: 80%;
+		}
+	}
+	@include desktop {
+		&__container,
+		&__title {
+			padding: 0;
+		}
+	}
+}
+
+// RECENT POST
+
+.recentPost {
+	@include tablet {
+		&__content {
+			&__details {
+				padding: 0;
+				& h2 {
+					width: 60%;
+					text-align: center;
+				}
+				& p {
+					width: 70%;
+				}
+			}
+			&__author {
+				width: 70%;
+			}
+		}
+	}
+	@include desktop {
+		&__title {
+			padding: 0;
+		}
+	}
+}
+
+// LIST POST
+
+.listPost {
+	@include desktop {
+		&__container {
+			padding: 0;
+		}
+	}
+}
+
+// NEWSLETTER
+
+.newsletter {
+	@include tablet {
+		&__subscribe {
+			width: 50%;
+			padding: 0;
+		}
+	}
+}
+
+// FOOTER
+
+.footerBlog {
+	@include tablet {
+		&__container {
+			flex-direction: row;
+		}
+		&__socialMedia {
+			width: 30%;
+		}
+	}
+	@include desktop {
+		&__container {
+			justify-content: space-between;
+		}
+	}
+}

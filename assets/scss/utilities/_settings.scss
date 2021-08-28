@@ -1,0 +1,58 @@
+/*------------------------------------*\
+    $SETTINGS
+\*------------------------------------*/
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai+Looped:wght@300;400;700&display=swap');
+//values Constant
+$baselineheight: 1.5;
+$pagemaxwidth: 1000px;
+$radius: 4px;
+$hovertransition: 0.3s;
+$animationtime: 0.8s;
+
+/*------------------------------------*\
+    $FONT FACE
+\*------------------------------------*/
+
+//Fonts definitions
+$basefont: 'IBM Plex Sans Thai Looped', sans-serif;
+$basefontweight: 300;
+$subtitlefontweight: 400;
+$titlefontweight: 700;
+$basefontsize: 1.7;
+
+//Font Size variables
+$size-vars: (
+	'x-small': 1.5,
+	'small': 1.6,
+	'normal': 2.4,
+	'big': 2.8,
+	'huge': 3,
+);
+
+/*------------------------------------*\
+    $COLORS
+\*------------------------------------*/
+
+//Brand colors
+$color-primary: hsl(223, 79%, 46%);
+$color-secondary: hsl(200, 78%, 37%);
+$tag-primary: hsl(342, 89%, 37%);
+$tag-secondary: hsl(160, 74%, 34%);
+$dark: hsl(0, 0%, 16%);
+$black-light: hsl(0, 0%, 29%);
+$light: hsl(0, 0%, 100%);
+$color-borders: $light;
+
+// Links
+$linkcolor: $light;
+$linkcolorhover: $linkcolor;
+$linkcolorvisited: $linkcolor;
+$linkcolorfocus: $linkcolor;
+
+// botones
+$buttonbackground: $color-primary;
+$buttonbordercolor: currentcolor;
+$buttoncolor: $light;
+$buttonborderwidth: 1px;
+$buttonborderstyle: solid;

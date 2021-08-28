@@ -1,0 +1,117 @@
+/*------------------------------------*\
+    $MAIN
+\*------------------------------------*/
+
+.heroBlog,
+.popularPost,
+.recentPost,
+.listPost,
+.newsletter__container,
+.footerBlog__container,
+.newsletter__container {
+	@include max-width();
+	margin-top: 5.6rem;
+}
+
+%space {
+	padding: 0 1rem;
+}
+
+%lineBottom::after {
+	content: '';
+	display: block;
+	width: 40px;
+	height: 3px;
+	background-color: $color-primary;
+}
+
+// HERO BLOG
+
+.heroBlog {
+	position: relative;
+	height: 500px;
+	color: $light;
+	@include flexCenter(center, end);
+	&::before {
+		content: '';
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		background: url(../../../assets/img/hero__blogger.jpg) no-repeat center;
+		background-size: cover;
+		filter: brightness(30%);
+	}
+
+	&__container {
+		position: relative;
+		height: 70%;
+		width: 100%;
+		@include flexCenter(space-between);
+		flex-direction: column;
+
+		&__title {
+			text-align: center;
+			@extend %space;
+		}
+		&__content {
+			height: 40%;
+			width: 100%;
+			padding-bottom: 2rem;
+			@extend %space;
+
+			@include flexCenter();
+			flex-wrap: wrap;
+		}
+		&__author {
+			width: 100%;
+			@include flexCenter(space-evenly);
+			& span {
+				padding-right: 0.5rem;
+				margin-right: 0.5rem;
+				border-right-style: solid;
+			}
+		}
+		&__btn {
+			@extend %btn;
+		}
+	}
+}
+
+// RECENT POSTS
+
+.recentPost {
+	&__title {
+		margin-bottom: 1.5rem;
+		color: $color-primary;
+		@extend %space;
+		@extend %lineBottom;
+	}
+	&__content {
+		position: relative;
+		height: 500px;
+		&::before {
+			content: '';
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			background: url(../../../assets/img/blog__principal.jpg) no-repeat center;
+			background-size: cover;
+			filter: brightness(30%);
+		}
+		&__details {
+			position: relative;
+			height: 100%;
+			color: $light;
+			@extend %space;
+			@include flexCenter(space-around);
+			flex-direction: column;
+		}
+		&__author {
+			width: 100%;
+			@include flexCenter(space-between);
+		}
+		&__btn {
+			@extend %btn;
+		}
+	}
+}

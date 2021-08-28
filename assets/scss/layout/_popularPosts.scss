@@ -1,0 +1,47 @@
+.popularPost {
+	height: 100%;
+	&__title {
+		color: $color-primary;
+		@extend %space;
+		@extend %lineBottom;
+	}
+	&__container {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 3rem;
+		@extend %space;
+	}
+	&__article {
+		height: 600px;
+		@include flexCenter(space-evenly);
+		flex-direction: column;
+		align-items: center;
+		&__img {
+			position: relative;
+			height: 250px;
+			width: 100%;
+		}
+		&__tag {
+			position: absolute;
+			left: 0;
+			bottom: 30px;
+			@extend %tag;
+		}
+		&__details {
+			& h3 {
+				margin: 1.5rem 0;
+			}
+		}
+		&__author {
+			width: 100%;
+			@include flexCenter(space-between);
+			& span {
+				color: $black-light;
+				font-weight: $titlefontweight;
+			}
+		}
+		&__btn {
+			@extend %btn;
+		}
+	}
+}
